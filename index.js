@@ -12,5 +12,17 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
-}
+  return tutorials.map((line)=>{
+    const caps=line.split(" ");
+    const capsLines=caps.map(
+      (caps=>caps.charAt(0).toUpperCase()+caps.slice(1))
+    );
+    const results=capsLines.join(" ");
+    return results;
+  });
+};
+console.log(titleCased());
+// let titleCased = tutorials.map(
+//   tutorials => tutorials.charAt(0).toUpperCase() + tutorials.slice(1).toLowerCase());
+
+// console.log(titleCased);
